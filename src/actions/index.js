@@ -3,7 +3,7 @@ import callApi from './../utils/callApi';
 
 export const actFetchProductsRequest = () => {
     return (dispatch) => {
-        return callApi('api/article/export', 'GET', null).then(res => {
+        return callApi('api/public-articles', 'GET', null).then(res => {
             dispatch(actFetchProducts(res.data));
         });
     }
